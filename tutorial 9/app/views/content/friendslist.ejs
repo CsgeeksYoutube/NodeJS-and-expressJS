@@ -1,0 +1,18 @@
+
+<article class="friendslist">
+  <div class="container">
+    <div class="row">
+        <% friends.forEach(function(item) { %>
+        <div class="col-sm-8">
+          <h3 class="friendslist-title"><%= item.title %></h3>
+          <h5 class="friendslist-name"> <a href="/friends/<%= item.shortname %>"><%= item.name %></a></h5>
+          <p class="friendslist-info"><a href="/friends/<%= item.shortname %>">
+            <img class="friendslist-img img-circle pull-left" src="/images/friends/<%= item.shortname %>.jpg"
+             alt="Photo of <%= item.name %>"></a>
+            <%= item.summary %>
+          </a></p>
+        </div>
+        <%  }); %>
+    </div><!-- row -->
+  </div><!-- container -->
+</article>

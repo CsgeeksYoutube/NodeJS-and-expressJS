@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head><% include template/head.ejs %></head>
+  <body id="<%= pageID %>">
+    <% include template/header.ejs %>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+        <% include content/friendslist.ejs %>
+        </div><!-- primary -->
+            </div>
+    </div><!-- container -->
+    <% include template/jsdefaults.ejs %>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "csgeeks ",
+  "main": "app/app.js",
+  "scripts": {
+    "start": "nodemon -e js,css,ejs,json --watch app --ignore feedback.json"
+  },
+  "author": "vijay",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "reload": "^2.2.2"
+  }
+}

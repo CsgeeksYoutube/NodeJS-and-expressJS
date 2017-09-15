@@ -1,0 +1,36 @@
+
+<article class="friendslist <% if (pageID=='home'){ %> jumbotron hidden-xs<% } %>">
+  <div class="container">
+    <div class="row">
+        <% friends.forEach(function(item) { %>
+        <div class="<% if(pageID == 'home'){%> col-sm-4 text-center <%} else{%>col-sm-8 <%}%>">
+          <h3 class="friendslist-title"><%= item.title %></h3>
+          <h5 class="friendslist-name"> <a href="/friends/<%= item.shortname %>"><%= item.name %></a></h5>
+          <p class="friendslist-info"><a href="/friends/<%= item.shortname %>">
+
+            <% if(pageID == 'home') {%>
+            <img class="friendslist-img img-circle" src="/images/friends/<%= item.shortname %>.jpg"
+             alt="Photo of <%= item.name %>">
+             <% } %>
+             <% if(pageID == 'friends') {%>
+             <img class="friendslist-img img-circle pull-left" src="/images/friends/<%= item.shortname %>.jpg"
+              alt="Photo of <%= item.name %>">
+              <% } %>
+
+
+           </a>
+           <% if(pageID == 'friendDetail') {%>
+           <img class="friendslist-img img-responsive pull-left" src="/images/friends/<%= item.shortname %>_tn.jpg"
+            alt="Photo of <%= item.name %>">
+            <% } %>
+             </a>
+             <% if(pageID !=='home') {%>
+
+            <%= item.summary %>
+            <%}%>
+          </p>
+        </div>
+        <%  }); %>
+    </div><!-- row -->
+  </div><!-- container -->
+</article>
