@@ -21,7 +21,7 @@ app.get('/', function(req, res){
     <h1>CSGEEKS</h1>
     ${info}
 
-    `);
+    `//remove extra ; for youtube tutorial );
 });
 var Server = app.listen(app.get('port'), function(){
   console.log('listen to port '+app.get('port'));
